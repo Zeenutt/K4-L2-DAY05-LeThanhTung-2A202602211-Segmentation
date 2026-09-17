@@ -2,9 +2,9 @@
 
 **Cách dùng:** Thay mọi dấu `…` bằng bài làm thật của bạn trước khi nộp link fork trên VLearn. Giữ nguyên bốn mục và bảng để coach đọc nhanh. Viết ngắn, cụ thể theo ảnh/vùng; không cần thuật ngữ chuyên sâu. Ví dụ trong [hướng dẫn mẫu](reports/REPORT_TEMPLATE.md) chỉ giúp hiểu cách điền, không phải câu trả lời để chép lại.
 
-- Mã học viên theo lớp: …
-- Ngày / CVAT local: …
-- Công cụ đã dùng: …
+- Mã học viên theo lớp: 2A202602211
+- Ngày / CVAT local: 17/09/2026
+- Công cụ đã dùng: SAM
 
 Mã học viên là mã lớp cấp; không cần ghi họ tên trong report nếu kênh VLearn đã nhận diện bạn. Chỉ ghi công cụ thật sự đã dùng; không có SAM vẫn làm bài bình thường.
 
@@ -14,16 +14,16 @@ Ghi tên ZIP đúng như file trong `submissions/` và số ảnh đã vẽ, Sav
 
 | Task | File ZIP đúng tên | Hoàn thành mấy ảnh | Điểm tối đa (coach chấm sau) |
 | --- | --- | ---: | ---: |
-| easy_semantic | … | … / 3 | 20 |
-| medium_instance | … | … / 3 | 32 |
-| hard_panoptic | … | … / 2 | 30 |
-| cp1_holes | … | … / 1 | 3 |
-| cp2_slice | … | … / 1 | 3 |
-| cp5_occlusion | … | … / 1 | 3 |
-| cp3_thin | … | … / 1 | 3 |
-| cp4_curb | … | … / 1 | 3 |
-| cp6_coverage | … | … / 1 | 3 |
-| **Tổng tối đa** | | | **100** |
+| easy_semantic | easy_semantic.zip | 3 / 3 | 20 |
+| medium_instance | medium_instance.zip | 3 / 3 | 32 |
+| hard_panoptic | hard_panoptic.zip | 2 / 2 | 30 |
+| cp1_holes | cp1_holes.zip | 1 / 1 | 3 |
+| cp2_slice | cp2_slice.zip | 1 / 1 | 3 |
+| cp5_occlusion | cp5_occlusion.zip | 1 / 1 | 3 |
+| cp3_thin | cp3_thin.zip | 1 / 1 | 3 |
+| cp4_curb | cp4_curb.zip | 1 / 1 | 3 |
+| cp6_coverage | cp6_coverage.zip | 1 / 1 | 3 |
+| **Tổng tối đa** | | 14 | **100** |
 
 Nếu export lỗi, ghi task, dữ liệu đã Save đến đâu và lỗi đã báo coach.
 
@@ -31,9 +31,9 @@ Nếu export lỗi, ghi task, dữ liệu đã Save đến đâu và lỗi đã 
 
 Chọn object đầu tiên bạn tự vẽ ở `medium_instance`, trước khi xem bất kỳ đề xuất tự động nào cho object đó. Ghi ảnh/vị trí đủ để tìm lại; “quy tắc biên” là lý do bạn chọn hoặc dừng mask ở ranh đó.
 
-- Ảnh, vị trí và object Medium đầu tiên tự vẽ: …
-- Class và quy tắc tôi dùng để chọn biên: …
-- Nếu dùng gợi ý sau đó: vùng gợi ý sai/đúng, hành động sửa/giữ và lý do: …
+- Ảnh, vị trí và object Medium đầu tiên tự vẽ: 000000181542, người giữa ảnh
+- Class và quy tắc tôi dùng để chọn biên: person và quy tắc là các nét của vật thể vẫn thuộc về vật thể đó
+- Nếu dùng gợi ý sau đó: vùng gợi ý sai/đúng, hành động sửa/giữ và lý do: không dùng, gán nhãn vì đã xác định chính xác vật thể đó
 - Nếu không dùng gợi ý: ghi “không dùng”; vẫn giải thích một quyết định gán nhãn của mình.
 
 ## 3. Một lỗi tôi tìm thấy và sửa
@@ -54,6 +54,6 @@ Mỗi ca là một **vùng cụ thể** khiến bạn phải cân nhắc hai cá
 
 | Ảnh/vị trí | Hai cách hiểu có thể | Quy tắc/chứng cứ | Quyết định hoặc câu hỏi cho coach |
 | --- | --- | --- | --- |
-| 1 | … | … | … |
-| 2 | … | … | … |
+| 1 | Ảnh 000000460147/xe chở ô tô giữa ảnh | chỉ gán xe tải / gán cả xe tải và các xe ô tô được chở trên xe tải | Gán cả xe tải và các xe ô tô được chở |
+| 2 | Ảnh 000000460147/object màu vàng bên trái góc trên | building / không gán | Không gán vì nhìn bằng mắt không giống building |
 | 3 | … | … | … |
